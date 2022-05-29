@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drum Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script>
+        function play(str){
+            var audio=document.getElementById(str);
+            audio.play();
+
+            if(str==="q"|| str==="Q"){
+                document.getElementById("display").innerText="Achievement wind drums";
+            }else if(str==="e" || str==="E"){
+                document.getElementById("display").innerText="Drum hit with eco";
+            }else if(str==="a" || str==="A"){
+                document.getElementById("display").innerText="Drum roll";
+            }else if(str==="s" || str==="S"){
+                document.getElementById("display").innerText="Fall drum and bells";
+            }else if(str==="d" || str==="D"){
+                document.getElementById("display").innerText="Fall drum and xylophone";
+            }else if(str==="z" || str==="Z"){
+                document.getElementById("display").innerText="Metal hit drum sound";
+            }else if(str==="x" || str==="X"){
+                document.getElementById("display").innerText="Omnious drums appear";
+            }else if(str==="c" || str==="C"){
+                document.getElementById("display").innerText="Toy drums and bell ding";
+            }else if(str==="w" || str==="W"){
+                document.getElementById("display").innerText="Atmospheric wind drum roll";
+            }
+            
+        }
+        window.document.onkeyup=function(event){
+            let keyStroke=event.key;
+            if(keyStroke==="q"|| keyStroke==="Q"){
+                play("Q");
+            }else if(keyStroke==="e" || keyStroke==="E"){
+                play("E");
+            }else if(keyStroke==="a" || keyStroke==="A"){
+                play("A");
+            }else if(keyStroke==="s" || keyStroke==="S"){
+                play("S");
+            }else if(keyStroke==="d" || keyStroke==="D"){
+                play("D");
+            }else if(keyStroke==="z" || keyStroke==="Z"){
+                play("Z");
+            }else if(keyStroke==="x" || keyStroke==="X"){
+                play("X");
+            }else if(keyStroke==="c" || keyStroke==="C"){
+                play("C");
+            }else if(keyStroke==="w" || keyStroke==="W"){
+                play("W");
+            }
+        }
+    </script>
+</head>
+  <body>
+    <div id="drum-machine">
+        <h1 class="text-center">Drum Machine</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center my-3" id="display"><h2>Click or Press labelled key</h2></div>
+            </div>
+        </div>
+        
+        <div class="d-grid gap-2 col-6 mx-auto my-3">
+            <div class="btn-group btn-group-lg">
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('Q')" id="0">Q 
+                <audio src="./clip/mixkit-achievement-win-drums-555.wav" class="clip" id="Q"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-info" onClick="play('W')" id="1">W 
+                <audio src="./clip/mixkit-atmospheric-wind-drum-roll-swoosh-576.wav" class="clip" id="W"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('E')" id="2">E 
+                <audio src="./clip/mixkit-drum-hit-with-eco-544.wav" class="clip" id="E"></audio>
+            </button>
+            </div>
+
+            <div class="btn-group btn-group-lg">
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('A')" id="3">A 
+                <audio src="./clip/mixkit-fail-drum-and-bells-571.wav" class="clip" id="A"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-info" onClick="play('S')" id="4">S 
+                <audio src="./clip/mixkit-fail-drum-and-xylophone-568.wav" class="clip" id="S"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('D')" id="5">D 
+                <audio src="./clip/mixkit-metal-hit-drum-sound-550.wav" class="clip" id="D"></audio>
+            </button>
+            </div>
+
+            <div class="btn-group btn-group-lg">
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('Z')" id="6">Z 
+                <audio src="./clip/mixkit-ominous-drums-appear-228.wav" class="clip" id="Z"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-info" onClick="play('X')" id="7">X 
+                <audio src="./clip/mixkit-toy-drums-and-bell-ding-560.wav" class="clip" id="X"></audio>
+            </button>
+            <button class="drum-pad btn btn-block btn-primary" onClick="play('C')" id="8">C 
+                <audio src="./clip/mixkit-tribal-deep-drum-echoes-575.wav" class="clip" id="C"></audio>
+            </button>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
